@@ -1,0 +1,212 @@
+.container {
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.body {
+  flex: 1;
+  padding: var(--space-5);
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sectionLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+}
+
+.emotionSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.emotionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.emotionChip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 36px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border);
+  background-color: var(--color-surface);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  transition: all var(--transition-fast);
+  min-height: 44px;
+}
+
+.emotionChip:active {
+  background-color: var(--color-primary-light);
+}
+
+.emotionSelected {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.emotionLabel {
+  font-size: var(--text-xs);
+}
+
+.letterArea {
+  flex: 1;
+}
+
+.letterPaper {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.fromLine {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-faint);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.nicknameText {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-family: var(--font-serif);
+}
+
+.textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  color: var(--color-ink);
+  line-height: 1.8;
+}
+
+.textarea::placeholder {
+  color: var(--color-faint);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+}
+
+.charRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.charCount {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-faint);
+}
+
+.charLimit {
+  color: #c0392b;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
+  padding: var(--space-4) var(--space-5);
+  padding-bottom: calc(var(--space-4) + env(safe-area-inset-bottom));
+  background: linear-gradient(to top, var(--color-bg) 80%, transparent);
+}
+
+.sendButton {
+  width: 100%;
+  height: 52px;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  transition: opacity var(--transition-fast), background-color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.sendButton:not(:disabled):active {
+  background-color: #a07a30;
+}
+
+/* Success state */
+.successContainer {
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.successContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.successIcon {
+  font-size: 4rem;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.successTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.successDesc {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-muted);
+}

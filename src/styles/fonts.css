@@ -1,0 +1,16 @@
+/* Noto Serif KR and Noto Sans KR are loaded via Google Fonts in index.html */
+
+/* Pretendard fallback — loaded from CDN if available */
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+}
+
+/* System font stack fallback */
+:root {
+  --system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}

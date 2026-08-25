@@ -1,0 +1,60 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 100;
+}
+
+.inner {
+  display: flex;
+  align-items: stretch;
+  height: var(--nav-height);
+}
+
+.navItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: var(--space-2) var(--space-1);
+  transition: background-color var(--transition-fast);
+  min-height: 44px;
+}
+
+.navItem:active {
+  background-color: var(--color-primary-light);
+}
+
+.navIcon {
+  font-size: 1.25rem;
+  line-height: 1;
+  filter: grayscale(0.3);
+  transition: filter var(--transition-fast), transform var(--transition-fast);
+}
+
+.navItemActive .navIcon {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.navLabel {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  color: var(--color-faint);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast);
+}
+
+.navItemActive .navLabel {
+  color: var(--color-primary);
+  font-weight: 700;
+}

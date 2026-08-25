@@ -1,0 +1,66 @@
+:root {
+  /* Colors */
+  --color-primary: #4e345e;
+  --color-accent: #bc923e;
+  --color-bg: #f5efe3;
+  --color-ink: #292522;
+  --color-muted: #766c61;
+  --color-faint: #9a8e81;
+  --color-surface: #fffdf8;
+  --color-border: rgba(188, 146, 62, 0.28);
+  --color-primary-light: rgba(78, 52, 94, 0.08);
+  --color-accent-light: rgba(188, 146, 62, 0.12);
+
+  /* Typography */
+  --font-serif: "Noto Serif KR", serif;
+  --font-sans: Pretendard, "Noto Sans KR", sans-serif;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Border radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(41, 37, 34, 0.06);
+  --shadow-md: 0 4px 12px rgba(41, 37, 34, 0.08);
+  --shadow-lg: 0 8px 24px rgba(41, 37, 34, 0.12);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Safe area */
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+  --safe-left: env(safe-area-inset-left);
+  --safe-right: env(safe-area-inset-right);
+
+  /* Layout */
+  --nav-height: 64px;
+  --header-height: 56px;
+  --max-width: 480px;
+}
